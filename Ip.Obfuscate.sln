@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ip.Obfuscate", "Ip.Obfuscate\Ip.Obfuscate.csproj", "{CAC8D363-126E-4720-888B-3E6DA5B54E15}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{009107AA-C908-4B94-8A44-EEECBA82A4D4}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		C:\Users\Student235046\Documents\MIT-License.txt = C:\Users\Student235046\Documents\MIT-License.txt
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAC8D363-126E-4720-888B-3E6DA5B54E15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAC8D363-126E-4720-888B-3E6DA5B54E15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAC8D363-126E-4720-888B-3E6DA5B54E15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAC8D363-126E-4720-888B-3E6DA5B54E15}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {48FA518F-9A3B-4E01-AA62-56D666ADC7B6}
+	EndGlobalSection
+EndGlobal

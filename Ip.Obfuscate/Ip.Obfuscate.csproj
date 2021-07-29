@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <Authors>Michal Polak</Authors>
+    <Description>Simple library to obfuscate IP addresses in various ways.</Description>
+    <PackageLicenseFile>MIT-License.txt</PackageLicenseFile>
+  </PropertyGroup>
+
+</Project>
