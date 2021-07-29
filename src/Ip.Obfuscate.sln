@@ -3,13 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ip.Obfuscate", "Ip.Obfuscate\Ip.Obfuscate.csproj", "{CAC8D363-126E-4720-888B-3E6DA5B54E15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ip.Obfuscate", "Ip.Obfuscate\Ip.Obfuscate.csproj", "{CAC8D363-126E-4720-888B-3E6DA5B54E15}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{009107AA-C908-4B94-8A44-EEECBA82A4D4}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
 		C:\Users\Student235046\Documents\MIT-License.txt = C:\Users\Student235046\Documents\MIT-License.txt
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ip.Obfuscate.Core", "Ip.Obfuscate.Core\Ip.Obfuscate.Core.csproj", "{66FF1DC4-7F0B-4FB0-BF7A-281249F29623}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6419994D-D746-4220-B858-8AB43C055DE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ip.Obfuscate.Tests", "Ip.Obfuscate.Tests\Ip.Obfuscate.Tests.csproj", "{E77E1E95-D1D7-4BB4-A510-920E561C31B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +27,20 @@ Global
 		{CAC8D363-126E-4720-888B-3E6DA5B54E15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CAC8D363-126E-4720-888B-3E6DA5B54E15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CAC8D363-126E-4720-888B-3E6DA5B54E15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66FF1DC4-7F0B-4FB0-BF7A-281249F29623}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66FF1DC4-7F0B-4FB0-BF7A-281249F29623}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66FF1DC4-7F0B-4FB0-BF7A-281249F29623}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66FF1DC4-7F0B-4FB0-BF7A-281249F29623}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E77E1E95-D1D7-4BB4-A510-920E561C31B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E77E1E95-D1D7-4BB4-A510-920E561C31B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E77E1E95-D1D7-4BB4-A510-920E561C31B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E77E1E95-D1D7-4BB4-A510-920E561C31B1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E77E1E95-D1D7-4BB4-A510-920E561C31B1} = {6419994D-D746-4220-B858-8AB43C055DE7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {48FA518F-9A3B-4E01-AA62-56D666ADC7B6}
