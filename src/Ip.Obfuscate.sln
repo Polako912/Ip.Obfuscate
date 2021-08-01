@@ -11,11 +11,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		C:\Users\Student235046\Documents\MIT-License.txt = C:\Users\Student235046\Documents\MIT-License.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ip.Obfuscate.Core", "Ip.Obfuscate.Core\Ip.Obfuscate.Core.csproj", "{66FF1DC4-7F0B-4FB0-BF7A-281249F29623}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ip.Obfuscate.Core", "Ip.Obfuscate.Core\Ip.Obfuscate.Core.csproj", "{66FF1DC4-7F0B-4FB0-BF7A-281249F29623}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6419994D-D746-4220-B858-8AB43C055DE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ip.Obfuscate.Tests", "Ip.Obfuscate.Tests\Ip.Obfuscate.Tests.csproj", "{E77E1E95-D1D7-4BB4-A510-920E561C31B1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ip.Obfuscate.Tests", "Ip.Obfuscate.Tests\Ip.Obfuscate.Tests.csproj", "{8E4CFA1A-5B21-4632-BC91-5CA12DAFE71F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,16 +31,16 @@ Global
 		{66FF1DC4-7F0B-4FB0-BF7A-281249F29623}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66FF1DC4-7F0B-4FB0-BF7A-281249F29623}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66FF1DC4-7F0B-4FB0-BF7A-281249F29623}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E77E1E95-D1D7-4BB4-A510-920E561C31B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E77E1E95-D1D7-4BB4-A510-920E561C31B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E77E1E95-D1D7-4BB4-A510-920E561C31B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E77E1E95-D1D7-4BB4-A510-920E561C31B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E4CFA1A-5B21-4632-BC91-5CA12DAFE71F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E4CFA1A-5B21-4632-BC91-5CA12DAFE71F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E4CFA1A-5B21-4632-BC91-5CA12DAFE71F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E4CFA1A-5B21-4632-BC91-5CA12DAFE71F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{E77E1E95-D1D7-4BB4-A510-920E561C31B1} = {6419994D-D746-4220-B858-8AB43C055DE7}
+		{8E4CFA1A-5B21-4632-BC91-5CA12DAFE71F} = {6419994D-D746-4220-B858-8AB43C055DE7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {48FA518F-9A3B-4E01-AA62-56D666ADC7B6}
