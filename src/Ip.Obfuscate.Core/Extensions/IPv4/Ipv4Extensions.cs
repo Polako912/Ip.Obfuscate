@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
 namespace Ip.Obfuscate.Core.Extensions.IPv4
@@ -10,9 +11,17 @@ namespace Ip.Obfuscate.Core.Extensions.IPv4
             if (string.IsNullOrEmpty(inputIpAddress))
                 return string.Empty;
 
+            if(segments is null)
+                throw new ArgumentNullException("segments");
+
             var ipSegments = inputIpAddress.Split(".");
 
-            return string.Empty;
+            foreach (var segment in segments)
+            {
+                ipSegments[segment] = StringExtensions.BuildObfuscateString(obfuscateChar);
+            }
+
+            return string.Join(".", ipSegments);
         }
 
         public static string BasicObfuscateExtension(string inputIpAddress, char obfuscateChar)
