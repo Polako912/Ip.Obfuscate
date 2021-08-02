@@ -10,13 +10,17 @@ namespace Ip.Obfuscate
     public class IpObfuscator
     {
         private readonly IStringParser _stringParser;
+
         private readonly IIpv4Obfuscator _ipv4Obfuscator;
+        private readonly IIpv6Obfuscator _ipv6Obfuscator;
 
         public IpObfuscator(IStringParser stringParser,
-            IIpv4Obfuscator ipv4Obfuscator)
+            IIpv4Obfuscator ipv4Obfuscator,
+            IIpv6Obfuscator ipv6Obfuscator)
         {
             _stringParser = stringParser;
             _ipv4Obfuscator = ipv4Obfuscator;
+            _ipv6Obfuscator = ipv6Obfuscator;
         }
 
         /// <summary>
@@ -65,7 +69,14 @@ namespace Ip.Obfuscate
         /// <returns></returns>
         private string ObfuscateIpv6<T>(T inputIpAddress, char obfuscateChar, ObfuscationType obfuscationType, List<int> segments = null)
         {
-            return string.Empty;
+            return typeof(T) switch
+            {
+                { } ipAddressType when ipAddressType == typeof(IPAddress) => _ipv6Obfuscator.Obfuscate(
+                    _stringParser.ParseIpv4(inputIpAddress), obfuscateChar, obfuscationType, segments),
+                { } stringAddress when stringAddress == typeof(string) => _ipv6Obfuscator.Obfuscate(
+                    inputIpAddress.ToString(), obfuscateChar, obfuscationType, segments),
+                _ => throw new NotSupportedException($"Type {typeof(T)} is not currently supported")
+            };
         }
     }
 }
