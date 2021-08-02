@@ -18,6 +18,17 @@ namespace Ip.Obfuscate.Tests.Extensions
             int[] segments) =>
             Ipv4Extensions.CustomObfuscateExtension(inputAddress, obfuscateChar, segments.ToList());
 
+        [TestCase("111.111.111.111", 'X', ExpectedResult = "11X.XXX.XXX.X11")]
+        [TestCase("11.111.111.111", 'X', ExpectedResult = "11.XXX.XXX.X11")]
+        [TestCase("111.11.111.111", 'X', ExpectedResult = "11X.XXX.XXX.X11")]
+        [TestCase("111.111.11.111", 'X', ExpectedResult = "11X.XXX.XXX.X11")]
+        [TestCase("111.111.111.11", 'X', ExpectedResult = "11X.XXX.XXX.11")]
+        [TestCase("111.111.111.111", '*', ExpectedResult = "11*.***.***.*11")]
+        [TestCase("", '*', ExpectedResult = "")]
+        [TestCase(null, '*', ExpectedResult = "")]
+        public string BasicObfuscateExtension_ValidInout_ReturnsCorrectValue(string inputAddress, char obfuscateChar) =>
+            Ipv4Extensions.BasicObfuscateExtension(inputAddress, obfuscateChar);
+
         [TestCase("111.111.111.111", 'X', ExpectedResult = "XXX.XXX.XXX.XXX")]
         [TestCase("11.111.111.111", 'X', ExpectedResult = "XXX.XXX.XXX.XXX")]
         [TestCase("111.11.111.111", 'X', ExpectedResult = "XXX.XXX.XXX.XXX")]

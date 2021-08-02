@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace Ip.Obfuscate.Core.Extensions.IPv4
@@ -12,7 +13,7 @@ namespace Ip.Obfuscate.Core.Extensions.IPv4
                 return string.Empty;
 
             if(segments is null)
-                throw new ArgumentNullException("segments");
+                throw new ArgumentNullException(nameof(segments));
 
             var ipSegments = inputIpAddress.Split(".");
 
@@ -29,8 +30,36 @@ namespace Ip.Obfuscate.Core.Extensions.IPv4
             if (string.IsNullOrEmpty(inputIpAddress))
                 return string.Empty;
 
-            return string.Empty;
+            var ipSegments = inputIpAddress.Split(".");
+
+            if (ipSegments.Any(s => !CheckSegmentLength(s)))
+                return string.Empty;
+
+            return ipSegments.Length != 4
+                ? string.Empty
+                : BuildIpString(ObfuscateEdgeIpSegments(ipSegments[0], 2, obfuscateChar),
+                    ObfuscateEdgeIpSegments(ipSegments[3], 0,
+                        obfuscateChar), obfuscateChar);
         }
+
+        private static bool CheckSegmentLength(string segment) =>
+            segment.Length > 0;
+
+        private static string ObfuscateEdgeIpSegments(string segment, int index, char obfuscateChar)
+        {
+            if (segment.Length != 3) return segment;
+
+            var array = segment.ToCharArray();
+
+            if (array.Length == 3)
+                array[index] = obfuscateChar;
+
+            return new string(array);
+        }
+
+        private static string BuildIpString(string firstIpSegment, string lastIpSegment, char obfuscateChar) =>
+            firstIpSegment + "." + StringExtensions
+                .BuildMiddleObfuscatedString(obfuscateChar) + "." + lastIpSegment;
 
         public static string WholeObfuscateExtension(string inputIpAddress, char obfuscateChar)
         {
