@@ -39,5 +39,10 @@ namespace Ip.Obfuscate.Tests.Extensions
         [TestCase(null, '*', ExpectedResult = "")]
         public string WholeObfuscateExtension_ValidInout_ReturnsCorrectValue(string inputAddress, char obfuscateChar) =>
             Ipv4Extensions.WholeObfuscateExtension(inputAddress, obfuscateChar);
+
+        [TestCase("", '*', ExpectedResult = "")]
+        [TestCase(null, '*', ExpectedResult = "")]
+        public string RandomObfuscateExtension_ValidInout_ReturnsCorrectValue(string inputAddress, char obfuscateChar) =>
+            Ipv4Extensions.RandomObfuscateExtension(inputAddress, obfuscateChar);
     }
 }

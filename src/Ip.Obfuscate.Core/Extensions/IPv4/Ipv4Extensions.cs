@@ -9,17 +9,20 @@ namespace Ip.Obfuscate.Core.Extensions.IPv4
     {
         public static string CustomObfuscateExtension(string inputIpAddress, char obfuscateChar, List<int> segments = null)
         {
+            if (segments is null)
+                throw new ArgumentNullException(nameof(segments));
+
             if (string.IsNullOrEmpty(inputIpAddress))
                 return string.Empty;
 
-            if(segments is null)
-                throw new ArgumentNullException(nameof(segments));
-
             var ipSegments = inputIpAddress.Split(".");
+
+            if (ipSegments.Any(s => !CheckSegmentLength(s)))
+                return string.Empty;
 
             foreach (var segment in segments)
             {
-                ipSegments[segment] = StringExtensions.BuildObfuscateString(obfuscateChar);
+                ipSegments[segment] = StringExtensions.BuildSegmentObfuscatedString(obfuscateChar);
             }
 
             return string.Join(".", ipSegments);
@@ -68,7 +71,7 @@ namespace Ip.Obfuscate.Core.Extensions.IPv4
 
             var regex = new Regex(@"(\d+)", RegexOptions.Compiled);
 
-            return regex.Replace(inputIpAddress, StringExtensions.BuildObfuscateString(obfuscateChar));
+            return regex.Replace(inputIpAddress, StringExtensions.BuildSegmentObfuscatedString(obfuscateChar));
         }
 
         public static string RandomObfuscateExtension(string inputIpAddress, char obfuscateChar)
@@ -76,7 +79,18 @@ namespace Ip.Obfuscate.Core.Extensions.IPv4
             if (string.IsNullOrEmpty(inputIpAddress))
                 return string.Empty;
 
-            return string.Empty;
+            var ipSegments = inputIpAddress.Split(".");
+
+            if (ipSegments.Any(s => !CheckSegmentLength(s)))
+                return string.Empty;
+
+            var random = new Random();
+
+            var segmentsNumber = random.Next(0, 4);
+
+            var segments = Enumerable.Range(0, 4).Select(x => random.Next(0, segmentsNumber)).ToList();
+
+            return CustomObfuscateExtension(inputIpAddress, obfuscateChar, segments);
         }
     }
 }
