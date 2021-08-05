@@ -7,5 +7,8 @@
 
         public static string BuildMiddleObfuscatedString(char obfuscateChar) =>
             BuildSegmentObfuscatedString(obfuscateChar) + "." + BuildSegmentObfuscatedString(obfuscateChar);
+
+        public static string BuildIpv6SegmentObfuscatedString(char obfuscateChar) =>
+            obfuscateChar + obfuscateChar.ToString() + obfuscateChar + obfuscateChar;
     }
 }

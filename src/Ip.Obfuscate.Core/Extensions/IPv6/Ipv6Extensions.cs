@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace Ip.Obfuscate.Core.Extensions.IPv6
 {
@@ -29,7 +30,9 @@ namespace Ip.Obfuscate.Core.Extensions.IPv6
             if (string.IsNullOrEmpty(inputIpAddress))
                 return string.Empty;
 
-            return string.Empty;
+            var regex = new Regex(@"[a-zA-Z\d]+", RegexOptions.Compiled);
+
+            return regex.Replace(inputIpAddress, StringExtensions.BuildIpv6SegmentObfuscatedString(obfuscateChar));
         }
 
         public static string RandomObfuscateExtension(string inputIpAddress, char obfuscateChar)
