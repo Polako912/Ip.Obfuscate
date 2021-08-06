@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
@@ -9,6 +9,15 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Ip.Obfuscate.Core\Ip.Obfuscate.Core.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <PackageLicenseFile>MIT-License.txt</PackageLicenseFile>
+    <PackageId>IpObfuscator</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\MIT-License.txt" Pack="true" PackagePath="MIT-License.txt" />
   </ItemGroup>
 
 </Project>

@@ -8,14 +8,14 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{009107AA-C908-4B94-8A44-EEECBA82A4D4}"
 	ProjectSection(SolutionItems) = preProject
 		.gitignore = .gitignore
-		C:\Users\Student235046\Documents\MIT-License.txt = C:\Users\Student235046\Documents\MIT-License.txt
+		..\MIT-License.txt = ..\MIT-License.txt
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ip.Obfuscate.Core", "Ip.Obfuscate.Core\Ip.Obfuscate.Core.csproj", "{66FF1DC4-7F0B-4FB0-BF7A-281249F29623}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6419994D-D746-4220-B858-8AB43C055DE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ip.Obfuscate.Tests", "Ip.Obfuscate.Tests\Ip.Obfuscate.Tests.csproj", "{8E4CFA1A-5B21-4632-BC91-5CA12DAFE71F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ip.Obfuscate.Tests", "Ip.Obfuscate.Tests\Ip.Obfuscate.Tests.csproj", "{8E4CFA1A-5B21-4632-BC91-5CA12DAFE71F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
